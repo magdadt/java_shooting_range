@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.io.BufferedWriter;
 
 public class SaveToTxt {
 	
@@ -24,10 +25,11 @@ public class SaveToTxt {
             
             OutputStream output = new FileOutputStream(file, true);
             PrintWriter writer = new PrintWriter(output);
-            writer.write(text);
-            writer.flush();
+            BufferedWriter bfwriter = new BufferedWriter(writer);
+            bfwriter.write(text);
+            bfwriter.newLine();
+            bfwriter.flush();
             output.close();
-            System.out.println("Zapisywanie zakończone sukcesem");
  
         } catch (Exception ex) {
             ex.printStackTrace();

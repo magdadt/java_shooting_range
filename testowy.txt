@@ -1,0 +1,2 @@
+Strzelec nr 1 Anna Nowak Liczba strzałów: 2 Wynik: 1.5
+Strzelec nr 2 Jan Nowak Liczba strzałów: 3 Wynik: 6.0

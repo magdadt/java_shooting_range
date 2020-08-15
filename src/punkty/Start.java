@@ -45,9 +45,10 @@ public class Start {
 			
 			int[] attempts = new int[numberOfShots];
 			int result=0;
+			int shotNumber=1;
 			for (int n=0;n<numberOfShots;n++)
 			{
-				System.out.println("Podaj wynik strzału nr " + n);
+				System.out.println("Podaj wynik strzału nr " + shotNumber++);
 				result=skaner.nextInt();
 				while(result>10 || result<1)
 				{
@@ -95,6 +96,7 @@ public class Start {
 						save.writeToFile("Strzelec nr "+ i + " " + shooter.getName() + " " + shooter.getSurname() + " Liczba strzałów: " + shooter.getNumberOfShots() + " Wynik: "+ shooter.calculateResult());
 						i++;
 					}
+					System.out.println("Zapisywanie zakończone sukcesem");
 				
 				}else if (answer.equals("nie")){
 					System.out.println("Koniec");
